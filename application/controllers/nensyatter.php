@@ -26,11 +26,11 @@ class Nensyatter extends CI_Controller {
 
 	public function sn($sn = NULL) {
 		if (empty($sn) && ($sn = @$this->input->post('sn'))) {
-			redirect('http://' . base_url(MODE_NENSYATTER . '/sn/' . $sn));
+			redirect('https://' . base_url(MODE_NENSYATTER . '/sn/' . $sn));
 		}
 		$user = $this->user->get_user(MODE_NENSYATTER);
 		if (empty($sn)) {
-			redirect('http://' . base_url(MODE_NENSYATTER));
+			redirect('https://' . base_url(MODE_NENSYATTER));
 		}
 		$messages = array();
 		if ($user) {
